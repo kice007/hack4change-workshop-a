@@ -1,30 +1,29 @@
-# Python-Django Sample Application
-A sample web server in Python.
+# Hack4Change Workshop Python Repository
+This is the sample Python server repository for the first Hack4Change workshop. Combined with one of the Hack4Change client applications, you can use this server as a basis to build your own full stack web application.
 
-## Requirements
-- `python 3+`
-- `pipenv`
+# Getting Started
+To start working with this server project, do the following:
 
-## Setup Process
-- Enter the root directory and run `pipenv install` to fetch all the dependencies.
-- Then enter `pipenv shell` and you will be in a shell with everything setup and ready to go.
-- If you need to add dependencies as you go use `pipenv install <dep>` from the root directory so it's added to the `/Pipfile`. You may need to exit and re-enter your `pipenv shell` to do so.
+- Download Python 3 from https://www.python.org/downloads/ and install it.
+- Install `pipenv` from https://pipenv.pypa.io/en/latest/.
+- From this directory, run the command `pipenv install`. This will restore the application's dependencies.
 
-## Commands
+# Commands
+In order to use this application, start by running the `pipenv shell` command from this directory. This will open a `pipenv` shell will all of the installed dependencies and modules. Once this is done, you can run the following commands:
 
-### Dev Server
-This will run a server that rebuilds and reloads on file change, if you do not specify the address and port it will run on port 8000 instead
-
-`fastapi dev main.py --port 8080`
-
-### Tests
-From a pipenv shell:
-
+- `fastapi dev main.py --port 8080` will run a development server at `http://localhost:8080`. The server will automatically update when you change your source code.
 - `pytest` will run all tests.
 - `pytest <name>` will run tests in the named file or directory. For example, `pytest test_main.py` will run any tests in the `test_main.py` file.
+- `python main.py` will run a production version of the server.
 
-### Running/Building
-In order to run a production version of the server, you can use `python main.py`.
+# Layout
+The `Pipfile` and `Pipfile.lock` files contain the dependencies for the server application.
+The `main.py` file contains the web server source code.
+The `test_main.py` file contains all tests for the web server.
 
-## Reference Material
-You can learn more about FastAPI by referencing the documentation at https://fastapi.tiangolo.com/learn/.
+# Frameworks and Tools
+This application is built using the Python programming language. Documentation for the language and its features is available at https://www.python.org/doc/.
+
+Dependency and environment management are provided by Pipenv. More information about Pipenv is available at https://pipenv.pypa.io/en/latest/.
+
+REST API and some additional testing support are provided by the FastAPI package. Documentation and resources for this package are available at https://fastapi.tiangolo.com/.
